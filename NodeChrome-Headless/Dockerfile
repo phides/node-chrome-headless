@@ -1,9 +1,9 @@
 FROM selenium/node-chrome
 
+USER root
 
 #=================================
-# Chrome Launch Script Modication
+# Chrome Launch Script Wrapper
 #=================================
-COPY chrome_launcher.sh /opt/google/chrome/google-chrome
-RUN chmod +x /opt/google/chrome/google-chrome
-
+COPY wrap_chrome_binary /opt/bin/wrap_chrome_binary
+RUN /opt/bin/wrap_chrome_binary
