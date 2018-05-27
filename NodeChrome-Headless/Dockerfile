@@ -8,3 +8,9 @@ USER root
 COPY wrap_chrome_binary /opt/bin/wrap_chrome_binary2
 RUN chmod +x /opt/bin/wrap_chrome_binary2
 RUN /opt/bin/wrap_chrome_binary2
+
+
+#==============================
+# Locale and encoding settings
+#==============================
+ENV HUBHOST hub
