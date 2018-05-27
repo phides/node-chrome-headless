@@ -8,6 +8,6 @@ cat > "$WRAPPER_PATH" <<_EOF
 #!/bin/bash
 
 # Note: exec -a below is a bashism.
-exec -a "\$0" "$BASE_PATH"  --disable-dev-shm-usage --headless --window-size=1920,1080 --disable-gpu  "\$@"
+exec -a "\$0" "$BASE_PATH" --no-sandbox --disable-dev-shm-usage --headless --window-size=1920,1080 --disable-gpu  "\$@"
 _EOF
 chmod +x "$WRAPPER_PATH"
