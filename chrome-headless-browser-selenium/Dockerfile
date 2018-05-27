@@ -1,4 +1,4 @@
-FROM yukinying/chrome-headless-browser-selemium:latest
+FROM yukinying/chrome-headless-browser-selenium:latest
 
 USER root
 
