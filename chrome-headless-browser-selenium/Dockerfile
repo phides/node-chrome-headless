@@ -3,11 +3,10 @@ FROM yukinying/chrome-headless-browser-selenium:latest
 USER root
 
 #=================================
-# Chrome Launch Script Wrapper
+# Chrome Launch Script Modication
 #=================================
-COPY wrap_chrome_binary /opt/bin/wrap_chrome_binary2
-RUN chmod +x /opt/bin/wrap_chrome_binary2
-RUN /opt/bin/wrap_chrome_binary2
+COPY chrome_launcher.sh /opt/google/chrome/google-chrome
+RUN chmod +x /opt/google/chrome/google-chrome
 
 
 #==============================
